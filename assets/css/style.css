@@ -1,8 +1,6 @@
 @charset"utf-8";
 
 :root {
-  --tw-border-opacity: 1;
-  --blue: rgb(0 82 255/var(--tw-border-opacity));
   --primary: #74BBFB;
   --secondary: #ff66c4;
   --white: #ffffff;
@@ -34,7 +32,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: var(--blue);
+  color: var(--black);
   font-weight: 400;
   font-size: 18px;
   line-height: normal;
@@ -67,7 +65,7 @@ h4,
 h5,
 h6 {
   font-family: var(--hdnFont);
-  color: var(--blue);
+  color: var(--hdnColor);
   font-weight: normal;
 }
 
@@ -83,7 +81,7 @@ a:hover {
   text-decoration: none;
   border: none;
   outline: 0;
-  color: #000;
+  color: #74BBFB;
 }
 
 a:focus {
@@ -143,7 +141,7 @@ a.dfltBtn {
   border-radius: 40px;
   padding: 16px 50px;
   background: rgb(3, 47, 229);
-  background: linear-gradient(90deg, rgba(3, 47, 229, 1) 0%, rgba(3, 47, 229, 0.75) 100%);
+  background: linear-gradient(90deg, rgba(3, 47, 229, 1) 0%, #0052ff 100%);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -158,12 +156,12 @@ a.dfltBtn:hover {
 
 a.dfltWhiteBtn {
   background: var(--white);
-  color: var(--secondary);
+  color: #0052ff;
 }
 
 a.dfltWhiteBtn:hover {
-  background: var(--white);
-  color: var(--blue);
+  background: var(--black);
+  color: var(--white);
 }
 
 .lightGrayBg {
@@ -178,20 +176,7 @@ a.dfltWhiteBtn:hover {
 /*================ Header Style Start ================*/
 .mainHdrSec {
   position: relative;
-  padding: 0;
-}
-
-.banner {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  text-align: center;
-  background-image: url('../images/banner.png');
-  background-size: cover;
-  background-position: center;
+  padding: 5px 0;
 }
 
 .hdrRow {
@@ -202,7 +187,7 @@ a.dfltWhiteBtn:hover {
 }
 
 .hdrLeftPrt img {
-  max-width: 160px;
+  max-width: 100px;
 }
 
 .hdrRightPrt {
@@ -214,10 +199,11 @@ a.dfltWhiteBtn:hover {
   font-size: 30px;
   color: var(--white);
   display: inline-block;
-  background: var(--blue);
+  background: #0052ff;
   /* background: linear-gradient(90deg, rgba(2, 90, 200, 1) 0%, rgba(3, 100, 200, 0.75) 100%); */
   padding: 14px 35px;
   border-radius: 100px;
+  margin-bottom: 0;
 }
 
 .hdrRightPrt P a {
@@ -231,11 +217,6 @@ a.dfltWhiteBtn:hover {
   vertical-align: middle;
 }
 
-/* .hdrRightPrt P a:hover,
-.hdrRightPrt P img:hover {
-  color: var(--secondary);
-} */
-
 /*================ Header Style End ================*/
 
 
@@ -248,46 +229,42 @@ a.dfltWhiteBtn:hover {
 
 .btmMainFtr h2 {
   font-size: 60px;
-  color: var(--blue);
+  color: #000;
   font-style: italic;
 }
 
 .btmMainFtr h3 {
   font-size: 25px;
-  color: var(--blue);
+  color: var(--white);
   font-style: italic;
   display: inline-block;
-  background-color: var(--white);
+  background-color: #0052ff;;
   padding: 12px 30px;
   border-radius: 50px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   margin: 10px 0 30px 0;
 }
 
-.ftrLogoPrt {
+.ftrLogoPrt{
   margin-bottom: 30px;
 }
-
-.ftrLogoPrt ul {
+.ftrLogoPrt ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
-.ftrLogoPrt ul li {
+.ftrLogoPrt ul li{
   width: 16%;
   text-align: center;
   margin: 10px 2%;
 }
-
-.ftrLogoPrt ul li img {
+.ftrLogoPrt ul li img{
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
-.ftrLogoPrt ul li img:hover {
+.ftrLogoPrt ul li img:hover{
   transform: scale(1.3);
 }
 
@@ -328,7 +305,7 @@ a.dfltWhiteBtn:hover {
 }
 
 .ftrMnuTwo ul li a:hover {
-  color: var(--blue);
+  color: var(--black);
   text-decoration: underline;
 }
 
@@ -351,23 +328,22 @@ a.dfltWhiteBtn:hover {
 }*/
 
 .ftrCopyrightPrt {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  text-align: center;
 }
 
 .ftrCopyrightPrt p {
-  font-family: var(--hdnFont);
-  font-size: 14px;
-  color: var(--blue);
+  /* font-family: var(--hdnFont); */
+  font-size: 20px;
+  color: var(--black);
   font-weight: 700;
-  margin: 0;
+  margin: 0 0 10px;
 }
 
 .ftrCopyrightPrt p.blackText {
-  font-size: 13px;
-  color: var(--blue);
+  font-size: 15px;
+  color: var(--black);
   font-weight: normal;
+  font-family: var(--hdnFont);
 }
 
 /*================ Footer Style End ================*/
@@ -378,13 +354,19 @@ a.dfltWhiteBtn:hover {
 /*================ Banner Style Start ================*/
 .hmBnrSec {
   position: relative;
-  padding: 20px 0 10px 0;
+  margin: 10px 0 40px;
+ /* padding: 20px 0 10px 0;
   text-align: center;
+  background: url(../images/banner-img.png) 0 0 no-repeat;
+  background-size: 100%; */
+}
+.hmBnrSec img{
+  width: 100%;
 }
 
 .hmBnrSec h1 {
   font-size: 55px;
-  color: var(--blue);
+  color: var(--black);
   font-weight: bold;
   text-transform: uppercase;
   font-style: italic;
@@ -394,7 +376,7 @@ a.dfltWhiteBtn:hover {
 
 .hmBnrSec h2 {
   font-size: 50px;
-  color: var(--blue);
+  color: var(--black);
   font-weight: bold;
   text-transform: uppercase;
   font-style: italic;
@@ -409,43 +391,52 @@ a.dfltWhiteBtn:hover {
 .hmBnrSec .hmBnrContent {
   position: relative;
   padding: 0 150px;
-  background: url(../images/banner.png) no-repeat;
+}
+
+.hmBnrSec .hmBnrContent::before {
   position: absolute;
   content: '';
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: 170px;
+  background: url(../images/tiger-face-left.png) no-repeat 0 0;
   background-size: contain;
   top: 0;
   left: 0;
 }
 
+.hmBnrSec .hmBnrContent::after {
+  position: absolute;
+  content: '';
+  width: 200px;
+  height: 170px;
+  background: url(../images/tiger-face-right.png) no-repeat 0 0;
+  background-size: contain;
+  top: 0;
+  right: -20px;
+}
+
 
 /*================ Title Tweet Style Start ================*/
-.titleTweetSec {
+.titleTweetSec{
   position: relative;
   padding: 25px 0;
 }
-
-.titleTweetRow {
+.titleTweetRow{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 .descriptionPrt,
-.coinBaseTweetPrt {
+.coinBaseTweetPrt{
   width: 31%;
 }
-
-.titleTweetSec h2 {
+.titleTweetSec h2{
   font-size: 18px;
 }
-
-.titleTweetSec h2 img {
+.titleTweetSec h2 img{
   margin-left: 5px;
 }
-
-.titleTweetSec p {
+.titleTweetSec p{
   font-size: 15px;
   font-weight: 500;
   line-height: 22px;
@@ -454,10 +445,40 @@ a.dfltWhiteBtn:hover {
 
 /*================ About Style Start ================*/
 .aboutSec {
+  position: relative;
   padding: 10px 0;
   text-align: center;
   z-index: -1;
 }
+.aboutSecFlex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.aboutSecFlexLeft{
+  width: 48%;
+}
+.aboutSecFlexLeft p{
+  text-align: justify;
+}
+.aboutSecFlexRight{
+  width: 48%;
+}
+.aboutSecFlexRight img{
+  width: 100%;
+  border: solid 7px #e7e7e7;
+}
+/* .aboutTextPrt::after {
+  position: absolute;
+  content: '';
+  width: 225px;
+  height: 300px;
+  background: url(../images/about-after.png) no-repeat 0 0;
+  background-size: contain;
+  bottom: 0;
+  right: -250px;
+} */
 
 .aboutSec .container {
   position: relative;
@@ -519,7 +540,7 @@ a.dfltWhiteBtn:hover {
 
 .aboutTextPrt {
   position: relative;
-  max-width: 800px;
+  /* max-width: 800px; */
   margin: 0 auto;
 }
 
@@ -528,10 +549,11 @@ a.dfltWhiteBtn:hover {
   font-weight: 400;
   font-style: italic;
   padding-top: 25px;
+  padding-bottom: 35px;
 }
 
 .aboutTextPrt h2 span {
-  color: var(--secondary);
+  color: #0052ff;
 }
 
 
@@ -550,10 +572,9 @@ a.dfltWhiteBtn:hover {
 .servicesClm {
   width: 30%;
   text-align: center;
-  background: var(--blue);
+  background: #0052ff;
   /* background: rgb(3, 47, 229);
   background: linear-gradient(90deg, rgba(2, 90, 200, 1) 0%, rgba(3, 100, 200, 0.75) 100%); */
-  box-shadow: 0 8px 25px 0 rgba(31, 38, 135, 0.37);
   padding: 30px 0;
   border-radius: 15px;
 }
@@ -689,27 +710,24 @@ a.dfltWhiteBtn:hover {
 
 
 /*================ Disclamer Accordion Style Start ================*/
-.disclaimerAccordionSec {
+.disclaimerAccordionSec{
   position: relative;
   padding: 20px 0;
 }
-
-.disclaimerAccordionSec .accordion-item {
+.disclaimerAccordionSec .accordion-item{
   margin-bottom: 20px;
   border: none;
-  background: var(--blue);
+  background:#0052ff;
   border-radius: 10px;
   padding: 0;
 }
-
-.disclaimerAccordionSec .accordion-header {
+.disclaimerAccordionSec .accordion-header{
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: var(--white);
   font-weight: bold;
 }
-
-.disclaimerAccordionSec .accordion-button {
+.disclaimerAccordionSec .accordion-button{
   display: inline-block;
   width: 100%;
   padding: 30px 20px;
@@ -719,16 +737,13 @@ a.dfltWhiteBtn:hover {
   display: flex;
   justify-content: space-between;
 }
-
-.disclaimerAccordionSec .accordion-button::after {
+.disclaimerAccordionSec .accordion-button::after{
   display: none;
 }
-
-.disclaimerAccordionSec .accordion-body {
+.disclaimerAccordionSec .accordion-body{
   padding: 0 20px 20px 20px;
 }
-
-.disclaimerAccordionSec .accordion-body p {
+.disclaimerAccordionSec .accordion-body p{
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: var(--white);
@@ -738,7 +753,7 @@ a.dfltWhiteBtn:hover {
 
 
 .div-block-11 {
-  background: var(--blue);
+  background:#0052ff;
   border-radius: 10px;
   justify-content: space-around;
   align-items: center;
@@ -748,15 +763,14 @@ a.dfltWhiteBtn:hover {
   padding-bottom: 30px;
   display: flex;
 }
-
 .link-block-2-copy {
   padding: 0 25px;
   min-width: 180px;
   height: 48px;
   padding: 0 15px;
-  color: var(--secondary);
+  color: #032fe5;
   background-color: rgba(255, 255, 255, 0.9);
-  border-color: #000;
+  border-color: #032fe5;
   border-radius: 48px;
   display: inline-flex;
   align-items: center;
@@ -767,18 +781,15 @@ a.dfltWhiteBtn:hover {
   transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
 }
-
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-
 .h-3 {
   height: 0.75rem;
   color: #fff;
 }
-
-.disclaimerAccordionSec .div-block-11 p {
+.disclaimerAccordionSec .div-block-11 p{
   font-size: 0.875rem;
   color: var(--white);
   font-weight: normal;
@@ -789,13 +800,12 @@ a.dfltWhiteBtn:hover {
 
 
 /*================ Become a Beast Style Start ================*/
-.becomeBeastSec {
+.becomeBeastSec{
   position: relative;
   padding: 30px 0;
   text-align: center;
 }
-
-.becomeBeastContainer {
+.becomeBeastContainer{
   max-width: 700px;
   padding: 0 15px;
   margin: 0 auto;
@@ -803,56 +813,52 @@ a.dfltWhiteBtn:hover {
 
 
 /*================ Beastonamics Style Start ================*/
-.beastonamicsSec {
-  position: relative;
+.beastonamicsSec{
+  position: relative; 
   margin: 70px 0;
   width: 100%;
 }
-
-.beastoSec {
+.beastoSec{
   display: flex;
   justify-content: space-between;
 }
-
-.beastoLeftSec {
+.beastoLeftSec{
   width: 48%;
 }
-
-.beastonamicsSec h2 {
+.beastonamicsSec h2{
   font-size: 50px;
   font-weight: 400;
   font-style: italic;
   padding: 0 0 20px;
 }
-
-.beastoRightSec {
+.beastonamicsSec h2 span{
+  color: #0052ff;
+}
+.beastoRightSec{
   width: 48%;
 }
-
-.bgsecRow {
-  padding: 1rem 1.75rem 1.5rem;
-  background: var(--blue);
+.bgsecRow{
+  padding:1rem 1.75rem 1.5rem;
+  background:#0052ff;
+  /* background:#0052ff; */
   border-radius: 0.75rem;
   width: 100%;
   margin-bottom: 15px;
 }
-
-.bgsecRow h3 {
+.bgsecRow h3{
   font-size: 1.125rem;
   line-height: 1.75rem;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
 }
-
-.bgsecRow p {
+.bgsecRow p{
   font-size: 1.9rem;
   line-height: 2.25rem;
   color: #fff;
   font-weight: 700;
   margin-bottom: 0;
 }
-
-.bgsecRowSmallText {
+.bgsecRowSmallText{
   color: rgb(255 255 255 / 0.8);
   font-size: 15px !important;
   font-weight: 500 !important;
@@ -867,10 +873,9 @@ a.dfltWhiteBtn:hover {
   margin-bottom: 0;
   display: flex;
 }
-
 .faq_component {
   grid-row-gap: 0rem;
-  background: linear-gradient(to left, rgba(3, 47, 229, 0.75), #032fe5);
+  background: linear-gradient(to left, #0052ff, #032fe5);
   cursor: pointer;
   border-radius: 10px;
   flex-direction: column;
@@ -880,7 +885,6 @@ a.dfltWhiteBtn:hover {
   padding: 0 20px;
   display: flex;
 }
-
 .faq_component-header-wrapper {
   justify-content: space-between;
   align-items: center;
@@ -890,7 +894,6 @@ a.dfltWhiteBtn:hover {
   display: flex;
   position: relative;
 }
-
 .faq_component-heading {
   color: #ffffff;
   text-transform: none;
@@ -900,7 +903,6 @@ a.dfltWhiteBtn:hover {
   font-size: 16px;
   font-weight: 700;
 }
-
 .icon-embed-small {
   color: #fff;
   flex-direction: column;
@@ -910,9 +912,8 @@ a.dfltWhiteBtn:hover {
   height: 2rem;
   display: flex;
 }
-
 /*.div-block-11 {
-  background: linear-gradient(to left, rgba(3, 47, 229, 0.75), #032fe5);
+  background: linear-gradient(to left, #0052ff, #032fe5);
   border-radius: 10px;
   justify-content: space-around;
   align-items: center;
@@ -950,12 +951,68 @@ a.dfltWhiteBtn:hover {
 }*/
 
 
-
-
-
-
-
-
+.missionSec{
+  width: 100%;
+  margin: 50px 0;
+  display: flex;
+}
+.missionSec h2{
+  font-size: 50px;
+  font-weight: 400;
+  font-style: italic;
+  padding: 0 0 20px;
+  text-align: center;
+}
+.missionSec h2 span {
+  color: #0052ff;
+}
+.missionSec p.simpleText{
+  font-size: 15px;
+  color: var(--textColor);
+  font-weight: 700;
+  line-height: 25px;
+  margin-bottom: 15px;
+  padding: 0 15%;
+  text-align: center;
+}
+.missionRowSec{
+  width: 100%;
+}
+.missionRow{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: dashed 1px rgb(3 59 229 / 0.5);
+}
+.missionRowLeft{
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.missionRowRight{
+  width: 60%;
+}
+.numberText{
+  font-size: 3.00rem;
+  line-height: 1;
+  color: #0052ff;
+  margin-bottom: 0;
+  font-weight: 600;  
+  padding-right: 15px;
+}
+.missionRowLeft h3{
+  font-size: 1.79rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  /* color: #0052ff; */
+}
+.missionRowRight p{
+  font-size: 15px;
+  color: #0052ff;
+  margin-bottom: 0;
+}
 
 
 
@@ -982,7 +1039,7 @@ a.dfltWhiteBtn:hover {
 
 @media (max-width: 1199px) {
   .hdrLeftPrt img {
-    max-width: 100px;
+    max-width: 70px;
   }
 
   .hdrRightPrt P {
@@ -1086,8 +1143,7 @@ a.dfltWhiteBtn:hover {
     bottom: 45px;
     right: 150px;
   }
-
-  .aboutTextPrt::after {
+  .aboutTextPrt::after{
     display: none;
   }
 
@@ -1157,11 +1213,10 @@ a.dfltWhiteBtn:hover {
     margin: 10px 30px;
   }
 
-  .beastonamicsSec h2 {
+  .beastonamicsSec h2{
     font-size: 35px;
   }
-
-  .ftrLogoPrt ul li {
+  .ftrLogoPrt ul li{
     width: 17%;
     margin: 10px 1%;
   }
@@ -1219,31 +1274,26 @@ a.dfltWhiteBtn:hover {
   }
 
   .descriptionPrt,
-  .coinBaseTweetPrt {
+  .coinBaseTweetPrt{
     width: 100%;
     text-align: center;
     margin: 5px 0;
   }
-
-  .beastonamicsSec h2 {
+  .beastonamicsSec h2{
     font-size: 30px;
     text-align: center;
   }
-
-  .div-block-11 {
+  .div-block-11{
     flex-wrap: wrap;
     text-align: center;
   }
-
-  .link-block-2-copy {
+  .link-block-2-copy{
     margin-bottom: 13px;
   }
-
-  .ftrLogoPrt ul li {
+  .ftrLogoPrt ul li{
     width: 23%;
   }
-
-  .beastonamicsSec {
+  .beastonamicsSec{
     margin: 0;
     padding: 15px 0;
   }
@@ -1252,6 +1302,31 @@ a.dfltWhiteBtn:hover {
     font-size: 16px;
     line-height: 30px;
   }
+  .aboutSecFlexLeft {
+    width: 100%;
+}
+.aboutSecFlexLeft p {
+  text-align: center;
+}
+.aboutSecFlexRight {
+  width: 100%;
+}
+.missionSec h2 {
+  font-size: 40px;
+}
+.missionRow{
+  flex-wrap: wrap;
+}
+.missionRowLeft {
+  width: 100%;
+}
+.missionRowRight {
+  width: 100%;
+}
+.missionRowRight p{
+  line-height: 25px;
+  padding-top: 20px;
+}
 }
 
 
@@ -1296,11 +1371,12 @@ a.dfltWhiteBtn:hover {
   }
 
   .aboutTextPrt {
-    padding-top: 25px;
+    padding-top: 0;
   }
 
   .aboutTextPrt h2 {
     font-size: 25px;
+    padding-bottom: 0;
   }
 
   .disclamerItm h3 {
@@ -1312,20 +1388,18 @@ a.dfltWhiteBtn:hover {
     letter-spacing: 12px;
   }
 
-  .beastoSec {
+  .beastoSec{
     flex-wrap: wrap;
+    margin-top: 40px;
   }
-
   .beastoLeftSec,
-  .beastoRightSec {
+  .beastoRightSec{
     width: 100%;
   }
-
-  .ftrLogoPrt ul li {
+  .ftrLogoPrt ul li{
     width: 31%;
   }
-
-  .bgsecRow p {
+  .bgsecRow p{
     font-size: 1.4rem;
   }
 
@@ -1334,5 +1408,6 @@ a.dfltWhiteBtn:hover {
     padding: 12px 30px;
   }
 }
+
 
 /*======= Responsive End  =======*/
