@@ -133,15 +133,15 @@ p {
 a.dfltBtn {
   font-family: var(--hdnFont);
   font-size: 25px;
-  color: #0052ff;
+  color: #001ffe;
   font-weight: 500;
   font-style: italic;
   text-transform: uppercase;
   display: inline-block;
   border-radius: 40px;
   padding: 16px 50px;
-  background: rgb(3, 47, 229);
-  background: linear-gradient(90deg, rgba(3, 47, 229, 1) 0%, #0052ff 100%);
+  background: rgb(0, 31, 254);
+  background: linear-gradient(90deg, rgba(0, 31, 254, 1) 0%, #001ffe 100%);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -156,7 +156,7 @@ a.dfltBtn:hover {
 
 a.dfltWhiteBtn {
   background: var(--white);
-  color: #0052ff;
+  color: #001ffe;
 }
 
 a.dfltWhiteBtn:hover {
@@ -199,7 +199,7 @@ a.dfltWhiteBtn:hover {
   font-size: 30px;
   color: var(--white);
   display: inline-block;
-  background: #0052ff;
+  background: #001ffe;
   /* background: linear-gradient(90deg, rgba(2, 90, 200, 1) 0%, rgba(3, 100, 200, 0.75) 100%); */
   padding: 14px 35px;
   border-radius: 100px;
@@ -238,7 +238,7 @@ a.dfltWhiteBtn:hover {
   color: var(--white);
   font-style: italic;
   display: inline-block;
-  background-color: #0052ff;;
+  background-color: #001ffe;;
   padding: 12px 30px;
   border-radius: 50px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
@@ -553,7 +553,7 @@ a.dfltWhiteBtn:hover {
 }
 
 .aboutTextPrt h2 span {
-  color: #0052ff;
+  color: #001ffe;
 }
 
 
@@ -572,7 +572,7 @@ a.dfltWhiteBtn:hover {
 .servicesClm {
   width: 30%;
   text-align: center;
-  background: #0052ff;
+  background: #001ffe;
   /* background: rgb(3, 47, 229);
   background: linear-gradient(90deg, rgba(2, 90, 200, 1) 0%, rgba(3, 100, 200, 0.75) 100%); */
   padding: 30px 0;
@@ -717,7 +717,7 @@ a.dfltWhiteBtn:hover {
 .disclaimerAccordionSec .accordion-item{
   margin-bottom: 20px;
   border: none;
-  background:#0052ff;
+  background:#001ffe;
   border-radius: 10px;
   padding: 0;
 }
@@ -753,7 +753,7 @@ a.dfltWhiteBtn:hover {
 
 
 .div-block-11 {
-  background:#0052ff;
+  background:#001ffe;
   border-radius: 10px;
   justify-content: space-around;
   align-items: center;
@@ -768,9 +768,9 @@ a.dfltWhiteBtn:hover {
   min-width: 180px;
   height: 48px;
   padding: 0 15px;
-  color: #032fe5;
+  color: #001ffe;
   background-color: rgba(255, 255, 255, 0.9);
-  border-color: #032fe5;
+  border-color: #001ffe;
   border-radius: 48px;
   display: inline-flex;
   align-items: center;
@@ -832,14 +832,14 @@ a.dfltWhiteBtn:hover {
   padding: 0 0 20px;
 }
 .beastonamicsSec h2 span{
-  color: #0052ff;
+  color: #001ffe;
 }
 .beastoRightSec{
   width: 48%;
 }
 .bgsecRow{
   padding:1rem 1.75rem 1.5rem;
-  background:#0052ff;
+  background:#001ffe;
   /* background:#0052ff; */
   border-radius: 0.75rem;
   width: 100%;
@@ -875,7 +875,7 @@ a.dfltWhiteBtn:hover {
 }
 .faq_component {
   grid-row-gap: 0rem;
-  background: linear-gradient(to left, #0052ff, #032fe5);
+  background: linear-gradient(to left, #001ffe, #032fe5);
   cursor: pointer;
   border-radius: 10px;
   flex-direction: column;
@@ -964,7 +964,7 @@ a.dfltWhiteBtn:hover {
   text-align: center;
 }
 .missionSec h2 span {
-  color: #0052ff;
+  color: #001ffe;
 }
 .missionSec p.simpleText{
   font-size: 15px;
@@ -997,7 +997,7 @@ a.dfltWhiteBtn:hover {
 .numberText{
   font-size: 3.00rem;
   line-height: 1;
-  color: #0052ff;
+  color: #001ffe;
   margin-bottom: 0;
   font-weight: 600;  
   padding-right: 15px;
@@ -1010,7 +1010,7 @@ a.dfltWhiteBtn:hover {
 }
 .missionRowRight p{
   font-size: 15px;
-  color: #0052ff;
+  color: #001ffe;
   margin-bottom: 0;
 }
 
