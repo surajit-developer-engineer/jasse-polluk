@@ -131,21 +131,21 @@
           <!-- START:: Holders -->
           <div class="bgsecRow">
             <h3>Holders</h3>
-            <p>78,345+</p>
+            <p><span id="holders"></span>+</p>
             <p class="bgsecRowSmallText"></p>
           </div>
           <!-- END:: Holders -->
           <!-- START:: Price -->
           <div class="bgsecRow">
             <h3>Price</h3>
-            <p>0.00015</p>
+            <p>$<span id="exchangeRate"></span></p>
           </div>
           <!-- END:: Price -->
 
           <!-- START:: Market Cap -->
           <div class="bgsecRow">
             <h3>Market Cap</h3>
-            <p>$150,000</p>
+            <p>$<span id="circulatingMarketCap"></span></p>
             <p class="bgsecRowSmallText"></p>
           </div>
           <!-- END:: Market Cap -->
@@ -405,7 +405,7 @@
       <h2>LET’S GO $POLLUK</h2>
       <div class="ftrLogoPrt">
         <ul>
-          <li><a href="https://thebasedcartel.com/" target="_blank"><img src="assets/images/the-based-cartel.png"
+          <li><a href="#!"><img src="assets/images/the-based-cartel.png"
                 alt="" /></a></li>
           <li><a href="https://www.base.org/" target="_blank"><img src="assets/images/base.png" alt="" /></a></li>
           <li><a href="https://basescan.org/token/0x22222bd682745cf032006394750739684e45a5f8" target="_blank"><img
@@ -414,15 +414,15 @@
                 src="assets/images/coin-market-cap.png" alt="" /></a></li>
           <li><a href="https://www.dextools.io/app/en/token/jassepolluk" target="_blank"><img
                 src="assets/images/dex-tools.png" alt="" /></a></li>
-          <li><a href="https://bolide.fi/" target="_blank"><img src="assets/images/bolide.png" alt="" /></a></li>
+          <li><a href="#!"><img src="assets/images/bolide.png" alt="" /></a></li>
           <li><a href="https://dexscreener.com/base/0x8ca069b56e879a932d059e5cb83c1689fa562c0f" target="_blank"><img
                 src="assets/images/dex-screener.png" alt="" /></a></li>
-          <li><a href="#" target="_blank"><img src="assets/images/youtube.png" alt="" /></a></li>
+          <li><a href="#!"><img src="assets/images/youtube.png" alt="" /></a></li>
           <li><a href="https://app.uniswap.org/explore/tokens/base/0x22222bd682745cf032006394750739684e45a5f8"
               target="_blank"><img src="assets/images/uniswap.png" alt="" /></a></li>
           <li><a href="https://www.coingecko.com/en/coins/jasse-polluk" target="_blank"><img
                 src="assets/images/coingecko.png" alt="" /></a></li>
-          <li><a href="#" target="_blank"><img src="assets/images/flooz.png" alt="" /></a></li>
+          <li><a href="#!"><img src="assets/images/flooz.png" alt="" /></a></li>
           <li><a href="https://wallet.coinbase.com/links/gAn6BO4aFLb" target="_blank"><img
                 src="assets/images/coin-base-wallet.png" alt=""></a></li>
 
@@ -473,6 +473,33 @@
   <script src="assets/js/owl.carousel.min.js"></script>
   <!-- Custome js -->
   <script src="assets/js/custom.js"></script>
+  
+  <script>
+    const options = {
+      method: 'GET',
+      headers: { accept: 'application/json' }
+    };
+
+    fetch('https://base.blockscout.com/api/v2/addresses/0x22222bD682745cF032006394750739684E45A5F8', options)
+      .then(res => res.json())
+      .then(data => {
+        const formatter = new Intl.NumberFormat('en-US'); // Formatter for commas
+
+        // Format and display each value as specified
+        // const totalSupply = formatter.format(data.token?.total_supply || 0); // Add commas
+        const holders = formatter.format(data.token?.holders || 0); // Add commas
+        const exchangeRate = parseFloat(data.token?.exchange_rate || 0).toFixed(5); // Round to 5 decimals
+
+        const calculatedMarketCap = (data.token?.exchange_rate || 0) * 1000000000;
+        const circulatingMarketCap = formatter.format(Math.round(calculatedMarketCap)); // Add commas
+
+        // document.getElementById('totalSupply').textContent = totalSupply;
+        document.getElementById('holders').textContent = holders;
+        document.getElementById('exchangeRate').textContent = exchangeRate;
+        document.getElementById('circulatingMarketCap').textContent = circulatingMarketCap;
+      })
+      .catch(err => console.error('Error:', err));
+  </script>
 </body>
 
 </html>
